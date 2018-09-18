@@ -1,7 +1,14 @@
 .App {
+  margin-top: 300px;
   text-align: center;
+  background-color: darkgray;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 5px;
 }
-
+.fa {
+  font-size: 40px;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;

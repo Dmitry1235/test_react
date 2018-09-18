@@ -4,16 +4,13 @@ import React, {Component} from 'react';
 class Button extends Component {
 
   shouldComponentUpdate(nextProps) {
-    if (nextProps.text === this.props.text) {
-      return false;
-    }
-    return true;
+    return !(nextProps.text === this.props.text && nextProps.disabl === this.props.disabl);
   }
 
   render() {
-    const {click, text} = this.props;
+    const {click, disabl, text, classstyle} = this.props;
     return (
-      <button onClick={click}>{text}</button>
+      <button className={classstyle} onClick={click} disabled={disabl}>{text}</button>
     );
   }
 }
